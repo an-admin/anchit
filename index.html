@@ -581,6 +581,352 @@
       text-align: center;
     }
   }
+  /* Timeline Experience Section Styles */
+  .experience-section {
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .timeline-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+  
+  .timeline-line {
+    position: absolute;
+    width: 6px;
+    background-color: var(--text);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    border-radius: 10px;
+  }
+  
+  .timeline-arrow {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid var(--text);
+  }
+  
+  .timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+  }
+  
+  .timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--light);
+    border: 4px solid var(--accent1);
+    border-radius: 50%;
+    top: 20px;
+    z-index: 1;
+  }
+  
+  .timeline-item.right {
+    left: 50%;
+  }
+  
+  .timeline-item.left {
+    left: 0;
+  }
+  
+  .timeline-item.right::after {
+    left: -10px;
+  }
+  
+  .timeline-item.left::after {
+    right: -10px;
+  }
+  
+  .timeline-content {
+    padding: 25px;
+    background: var(--light);
+    border: 2px solid var(--text);
+    border-radius: 15px;
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.15);
+  }
+  
+  .timeline-date {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: var(--primary);
+    border: 2px solid var(--text);
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .timeline-content h3 {
+    margin: 0 0 5px 0;
+    font-size: 22px;
+  }
+  
+  .timeline-content h4 {
+    margin: 0 0 15px 0;
+    color: #666;
+    font-size: 18px;
+  }
+  
+  .timeline-content p {
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .timeline-icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: var(--accent2);
+    border: 2px solid var(--text);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -15px;
+    right: 20px;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  .timeline-item.left .timeline-icon {
+    background: var(--accent3);
+  }
+  
+  .timeline-item.right .timeline-icon {
+    background: var(--accent1);
+  }
+  
+  /* Use different colors for alternate items */
+  .timeline-item:nth-child(odd) .timeline-date {
+    background-color: var(--accent1);
+  }
+  
+  .timeline-item:nth-child(even) .timeline-date {
+    background-color: var(--accent3);
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .timeline-line {
+      left: 40px;
+    }
+    
+    .timeline-item {
+      width: 100%;
+      padding-left: 80px;
+      padding-right: 20px;
+    }
+    
+    .timeline-item.right,
+    .timeline-item.left {
+      left: 0;
+    }
+    
+    .timeline-item.right::after,
+    .timeline-item.left::after {
+      left: 30px;
+    }
+  }
+  .reviews-section {
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .reviews-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px 0 60px;
+  }
+  
+  .reviews-carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+  }
+  
+  .reviews-track {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .review-card {
+    min-width: 100%;
+    padding: 35px;
+    background-color: var(--light);
+    border: 2px solid var(--text);
+    border-radius: 20px;
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .review-stars {
+    color: var(--accent3);
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .review-text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 25px;
+    font-style: italic;
+  }
+  
+  .reviewer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .reviewer-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--text);
+    margin-right: 15px;
+  }
+  
+  .reviewer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .reviewer-info h4 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .reviewer-info p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+  }
+  
+  /* Navigation Dots */
+  .review-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid var(--text);
+  }
+  
+  .dot.active {
+    background-color: var(--accent1);
+    transform: scale(1.2);
+  }
+  
+  /* Navigation Arrows */
+  .review-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: var(--light);
+    border: 2px solid var(--text);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    transition: all 0.3s ease;
+  }
+  
+  .review-arrow:hover {
+    background-color: var(--primary);
+    transform: translateY(-50%) scale(1.1);
+  }
+  
+  .review-arrow.prev {
+    left: -25px;
+  }
+  
+  .review-arrow.next {
+    right: -25px;
+  }
+  
+  /* Decorative elements */
+  .reviews-section:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: var(--accent2);
+    opacity: 0.3;
+    border-radius: 50%;
+    top: 80px;
+    left: 5%;
+    z-index: -1;
+  }
+  
+  .reviews-section:after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: var(--accent1);
+    opacity: 0.2;
+    border-radius: 50%;
+    bottom: 80px;
+    right: 5%;
+    z-index: -1;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .review-card {
+      padding: 25px;
+    }
+    
+    .review-arrow {
+      display: none;
+    }
+    
+    .reviews-container {
+      padding: 0 20px 60px;
+    }
+  }
   </style>
 </head>
 <body>
@@ -608,6 +954,8 @@
             <li><a href="#about">About</a></li>
             <li><a href="#services">What I Do</a></li>
             <li><a href="#services-1">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#reviews">Reviews</a></li>
           </ul>
         </nav>
         <a href="#contact" class="cta-button">Contact Me</a>
@@ -763,6 +1111,190 @@
             </div>
           </div>
       </section>
+      <!-- Experience Timeline Section -->
+<section id="experience" class="experience-section">
+  <div class="section-title">
+    <p>My Professional Journey</p>
+    <h2>Experience & Education</h2>
+  </div>
+ <!--This is the timeline container--> 
+  <div class="timeline-container">
+    <div class="timeline-line">
+      <div class="timeline-arrow"></div>
+    </div>
+    
+    <!-- Timeline items -->  
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <div class="timeline-date">2025 - present</div>
+        <h3>Project Lead</h3>
+        <h4>Tech Shiksha</h4>
+        <p>Launched Tech Shiksha to teach coding, digital tools, and AI basics to underprivileged students—empowering them with essential tech skills.</p>
+        <div class="timeline-icon">
+          <i class="fa fa-child"></i>
+        </div>
+      </div>
+    </div>
+    
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <div class="timeline-date">2024 - Present</div>
+        <h3>CTO & Co-Founder</h3>
+        <h4>Stealth AI Startup</h4>
+        <p>Building something game-changing in the AI space. Can’t say much yet, but stay tuned.</p>
+        <div class="timeline-icon">
+          <i class="fas fa-code"></i>
+        </div>
+      </div>
+    </div>
+    
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <div class="timeline-date">2019 - Present</div>
+        <h3>Freelance Programmer</h3>
+        <h4>Fiverr</h4>
+        <p>Delivered custom websites, mobile apps, and full-stack solutions for global clients, focusing on clean code, fast delivery, and clear communication.</p>
+        <div class="timeline-icon">
+          <i class="fas fa-university"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="reviews" class="reviews-section">
+  <div class="section-title">
+    <p>What People Say</p>
+    <h2>Client Reviews</h2>
+  </div>
+  
+  <div class="reviews-container">
+    <div class="reviews-carousel">
+      <div class="reviews-track">
+        <!-- Review Card 1 -->
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"Anchit completely transformed our business with his mobile app. The user experience is intuitive, the design is stunning, and the functionality is flawless. We've seen a 40% increase in customer engagement since launch."</p>
+          <div class="reviewer">
+            <div class="reviewer-image">
+              <img src="./blue.png" alt="Client" />
+            </div>
+            <div class="reviewer-info">
+              <h4>Sarah Johnson</h4>
+              <p>CEO, TechStart Inc.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Review Card 2 -->
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <p class="review-text">"Working with Anchit was a game-changer for our startup. He understood our vision perfectly and delivered a web application that exceeded our expectations. His attention to detail and problem-solving skills are exceptional."</p>
+          <div class="reviewer">
+            <div class="reviewer-image">
+              <img src="./green.jpg" alt="Client" />
+            </div>
+            <div class="reviewer-info">
+              <h4>Michael Chen</h4>
+              <p>Founder, Innovate Solutions</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Review Card 3 -->
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"Anchit's content creation skills are outstanding. He crafted our brand story in a way that resonated deeply with our audience. The blog posts he writes consistently drive engagement and have significantly improved our SEO rankings."</p>
+          <div class="reviewer">
+            <div class="reviewer-image">
+              <img src="./pink.png" alt="Client" />
+            </div>
+            <div class="reviewer-info">
+              <h4>Priya Sharma</h4>
+              <p>Marketing Director, Global Reach</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Review Card 4 -->
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"The finance app Anchit developed for us has completely revolutionized how our users manage their money. His technical expertise combined with intuitive design thinking created a product our customers absolutely love."</p>
+          <div class="reviewer">
+            <div class="reviewer-image">
+              <img src="./red.jpg" alt="Client" />
+            </div>
+            <div class="reviewer-info">
+              <h4>James Wilson</h4>
+              <p>Product Lead, FinTech Innovations</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Review Card 5 -->
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <p class="review-text">"Anchit brings both technical skill and creative vision to his projects. He built our e-commerce platform from scratch and integrated complex features while keeping the user experience clean and simple. Truly impressive work!"</p>
+          <div class="reviewer">
+            <div class="reviewer-image">
+              <img src="./yellow.png" alt="Client" />
+            </div>
+            <div class="reviewer-info">
+              <h4>Emma Rodriguez</h4>
+              <p>Owner, StyleHouse Boutique</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Navigation Dots -->
+    <div class="review-dots">
+      <span class="dot active" data-slide="0"></span>
+      <span class="dot" data-slide="1"></span>
+      <span class="dot" data-slide="2"></span>
+      <span class="dot" data-slide="3"></span>
+      <span class="dot" data-slide="4"></span>
+    </div>
+    
+    <!-- Navigation Arrows -->
+    <button class="review-arrow prev">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="review-arrow next">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+</section>
       <section id="contact">
       <footer class="footer-section">
         <div class="footer-container">
@@ -859,6 +1391,62 @@
         document.head.appendChild(styleSheet);
       });
     });
+    document.addEventListener('DOMContentLoaded', function() {
+    const track = document.querySelector('.reviews-track');
+    const slides = Array.from(track.children);
+    const dots = document.querySelectorAll('.dot');
+    const prevButton = document.querySelector('.review-arrow.prev');
+    const nextButton = document.querySelector('.review-arrow.next');
+    
+    let currentIndex = 0;
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    
+    // Arrange slides next to each other
+    slides.forEach((slide, index) => {
+      slide.style.left = slideWidth * index + 'px';
+    });
+    
+    // Move to specific slide
+    const moveToSlide = (index) => {
+      if (index < 0) index = slides.length - 1;
+      if (index >= slides.length) index = 0;
+      
+      track.style.transform = 'translateX(-' + (slideWidth * index) + 'px)';
+      
+      // Update current index and active dot
+      currentIndex = index;
+      updateDots();
+    };
+    
+    // Update active dot
+    const updateDots = () => {
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+      });
+    };
+    
+    // When click on dot, move to that slide
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        moveToSlide(index);
+      });
+    });
+    
+    // When click on prev button, move to previous slide
+    prevButton.addEventListener('click', () => {
+      moveToSlide(currentIndex - 1);
+    });
+    
+    // When click on next button, move to next slide
+    nextButton.addEventListener('click', () => {
+      moveToSlide(currentIndex + 1);
+    });
+    
+    // Auto slide every 5 seconds
+    setInterval(() => {
+      moveToSlide(currentIndex + 1);
+    }, 5000);
+  });
   </script>
 </body>
 </html>
